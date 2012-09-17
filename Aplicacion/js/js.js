@@ -1,13 +1,13 @@
 $(document).ready(function() {
 						   
-	/*var hash = window.location.hash.substr(1);
+	var hash = window.location.hash.substr(1);
 	var href = $('#nav li a').each(function(){
 		var href = $(this).attr('href');
 		if(hash==href.substr(0,href.length-5)){
 			var toLoad = hash+'.html #content';
 			$('#content').load(toLoad)
 		}											
-	});*/
+	});
 
 	/*$('#nav li a').click(function(){
 								  
@@ -30,7 +30,7 @@ $(document).ready(function() {
 		
 	});*/
 	
-	/*$('#welcomeLanguage a').click(function(){								  
+	$('#welcomeLanguage a').click(function(){								  
 		lang = $(this).attr("id");
 		var animateDiv = $("#animateDiv");
 		
@@ -47,8 +47,8 @@ $(document).ready(function() {
 				});		
 		},1000);
 		
-		return false;* /	
-	});*/
+		return false;*/	
+	});
 	
 	var  opening = function(){
 		$("#line1").animate({width:"138px"},1000);
