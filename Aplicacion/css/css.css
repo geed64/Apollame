@@ -1,0 +1,189 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font: 0.8em "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;
+	background: #F3F3F4;
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	width: 1114px;
+	height: 565px;
+	background: #FFFFFF url(../images/MainBackground1114-565.jpg) no-repeat;
+	margin: 25px auto;
+	position:relative;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+}
+
+div#animateDiv{
+	position:relative;
+	top:150px;
+	left: 200px;
+	width: 700px;
+	height:  250px;
+}
+
+img#titleApollame{
+	height: 94px;
+	opacity:.001;
+	z-index:-1;
+}
+
+div.circle {
+	background: #69F;
+	width: 55px;
+	height: 55px;
+	-moz-border-radius: 5em;
+	-webkit-border-radius: 5em;
+	border-radius: 5em;
+	margin-bottom: 1em;
+	opacity:.001;
+	display: inline-block;
+} 
+
+div#circle1{
+	background: #2BAAE1;
+}
+div#circle2{
+	background: #0068B3;
+}
+div#circle3{
+	background: #262262;
+}
+
+div.line{
+	width: 0px;
+	height: 7px;
+	position:relative;
+	z-index:1;
+}
+
+div#line1{
+	background: #0068B3;
+	top: 10px;
+}
+
+div#line2{
+	background: #0068B3;
+	top: -30px;
+	right: -550px;
+}
+
+img.inline{
+	display: inline-block;
+	position:relative;
+	top: -20px;
+	left: 80px;
+	opacity:.001;
+}
+
+div#welcomeLanguage{
+	text-align:left;
+	font-size: 32px;
+	color: #0068B3;
+	position:relative;
+	width: 200px;
+	left:400px;
+	opacity:.001;
+	display:none;
+}
+
+div#welcomeLanguage>a{
+	color: #0068B3;	
+	text-decoration: none;
+}
+
+div#welcomeLanguage>a:hover{
+	color: #AAD4FF;	
+}
+
+img#logoApollame{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+ul#nav{
+	display: inline-block;
+	list-style: none;
+	overflow: hidden;
+}
+
+ul#nav>li{
+	display: inline-block;
+}
+
+div#content{
+	margin:10px;
+}
+
+/*
+h1 {
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0.3em 0;
+	text-align: center;
+	color: black;
+}
+#nav {
+	list-style: none;
+	padding: 0;
+	margin: 10px 0 20px 0;
+	background: #011833;
+	display: block;
+	overflow: hidden;
+	font-size: 0.9em;
+	height:33px;
+	text-transform:capitalize;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+}
+#nav li {
+	display: inline;
+}
+#nav li a {
+	display: block;
+	float: left;
+	padding: 10px 20px;
+	color: white;
+	text-decoration: none;
+}
+#nav li a:hover {
+	background: #0C53F9; /*url(images/nav_bar_o.jpg) repeat-x;
+}*/
+/*#load {
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	background: url(../images/ajax-loader.gif);
+	width: 43px;
+	height: 11px;
+	text-indent: -9999em;
+}
+
+h2 {
+	margin: 0;
+	padding: 0.5em 0;
+	color:#568945;
+	font-family:Helvetica, Arial, Sans-serif;
+}
+p {
+	margin: 0;
+	padding: 0.4em 0;
+	color:#686868;
+	line-height:1.4em;
+}
+#content img.right {
+	float: right;
+	margin: 0 0 8px 8px;
+}
+#foot {
+	padding: 15px;
+	color: white;
+	text-align: center;
+	margin: 30px 0 0 0;
+	border-top:1px solid #222222;
+}*/
