@@ -8,10 +8,16 @@ $(document).ready(function() {
 			$('#content').load(toLoad)
 		}											
 	});
-
-	/*$('#nav li a').click(function(){
-								  
-		var toLoad = $(this).attr('href')+' #content';
+	var lastLink;
+	
+	$('#nav li a').click(function(){
+		if(typeof lastLink != 'undefined')
+			lastLink.css({color:" #0B0146"});						  
+			
+		$(this).css({color:" #51A0C8"});						  
+		lastLink = $(this);
+		
+		/*var toLoad = $(this).attr('href')+' #content';
 		$('#content').hide('fast',loadContent);
 		$('#load').remove();
 		$('#wrapper').append('<span id="load">Cargando...</span>');
@@ -25,10 +31,10 @@ $(document).ready(function() {
 		}
 		function hideLoader() {
 			$('#load').fadeOut('normal');
-		}
+		}*/
 		return false;
 		
-	});*/
+	});
 	
 	$('#welcomeLanguage a').click(function(){								  
 		lang = $(this).attr("id");
@@ -39,7 +45,7 @@ $(document).ready(function() {
 			animateDiv.remove();
 		},1000);	
 		
-		/*setTimeout(function(){
+		setTimeout(function(){
 			$('#wrapper').append('<span id="load">LOADING...</span>');
 			$('#content').hide();
 			$('#content').load("intro.html",'',function(){
@@ -47,7 +53,7 @@ $(document).ready(function() {
 				});		
 		},1000);
 		
-		return false;*/	
+		return false;
 	});
 	
 	var  opening = function(){
