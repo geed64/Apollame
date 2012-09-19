@@ -4,7 +4,7 @@ $(document).ready(function() {
 	var href = $('#nav li a').each(function(){
 		var href = $(this).attr('href');
 		if(hash==href.substr(0,href.length-5)){
-			var toLoad = hash+'.html #content';
+			var toLoad = hash + '.html #content';
 			$('#content').load(toLoad)
 		}											
 	});
@@ -36,8 +36,11 @@ $(document).ready(function() {
 		
 	});
 	
-	$('#welcomeLanguage a').click(function(){								  
+	$('#welcomeLanguage a').click(function(){
+		$('#wrapper').block(defaultLoadingBlockUI); 
+ 
 		lang = $(this).attr("id");
+		$.cookie("lang", lang);
 		var animateDiv = $("#animateDiv");
 		
 		animateDiv.fadeOut(1000);
@@ -46,10 +49,12 @@ $(document).ready(function() {
 		},1000);	
 		
 		setTimeout(function(){
-			$('#wrapper').append('<span id="load">LOADING...</span>');
-			$('#content').hide();
-			$('#content').load("intro.html",'',function(){
-					$('#content').fadeIn('normal',function(){$('#load').fadeOut('normal');});
+			$('#MainContent').hide();
+			$('#MainContent').load("intro-" + $.cookie("lang") + ".html",'',function(){
+					$('#MainContent').fadeIn('normal',function(){
+							$('#wrapper').unblock(); 
+							$('#load').fadeOut('normal');
+						});
 				});		
 		},1000);
 		
