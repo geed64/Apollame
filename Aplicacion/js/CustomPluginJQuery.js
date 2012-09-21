@@ -40,6 +40,8 @@ var defaultLoadingBlockUI = {
 		};
 
 jQuery.loadScript = function (url, callback){
+	if(typeof callback == 'undefined')
+		callback = function(){};
 
     var script = document.createElement("script")
     script.type = "text/javascript";

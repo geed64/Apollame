@@ -105,12 +105,19 @@ img#logoApollame{
 	margin-top: 20px;
 	margin-left: 20px;
 	margin-right: 20px;
+	text-decoration: none;
+}
+
+A#LinkLogoApollame:visited {
+	text-decoration: none;
+	color: #0B0146;
+	border: 0px;
 }
 
 ul#nav{
 	display: inline-block;
 	list-style: none;
-	overflow: hidden;
+	
 	height: 50px;
 	background: #F2F2F2;
 }

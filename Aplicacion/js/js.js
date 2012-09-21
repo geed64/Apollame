@@ -8,13 +8,13 @@ $(document).ready(function() {
 			$('#content').load(toLoad)
 		}											
 	});
-	var lastLink;
 	
+	var lastLink;
 	$('#nav li a').click(function(){
 		if(typeof lastLink != 'undefined')
-			lastLink.css({color:" #0B0146"});						  
+			lastLink.css({color:"#0B0146"});						  
 			
-		$(this).css({color:" #51A0C8"});						  
+		$(this).css({color:"#51A0C8"});						  
 		lastLink = $(this);
 		
 		/*var toLoad = $(this).attr('href')+' #content';
@@ -37,10 +37,13 @@ $(document).ready(function() {
 	});
 	
 	$('#welcomeLanguage a').click(function(){
-		$('#wrapper').block(defaultLoadingBlockUI); 
  
 		lang = $(this).attr("id");
 		$.cookie("lang", lang);
+		
+		defaultLoadingBlockUI.message = '<h1>' + Internationalization[$.cookie("lang")].General.LoadingMsg + '</h1>';
+		$('#wrapper').block(defaultLoadingBlockUI); 
+		
 		var animateDiv = $("#animateDiv");
 		
 		animateDiv.fadeOut(1000);
@@ -50,7 +53,8 @@ $(document).ready(function() {
 		
 		setTimeout(function(){
 			$('#MainContent').hide();
-			$('#MainContent').load("intro-" + $.cookie("lang") + ".html",'',function(){
+			$('#MainContent').load("intro.html",'',function(){
+					$.loadScript("js/intro.js");
 					$('#MainContent').fadeIn('normal',function(){
 							$('#wrapper').unblock(); 
 							$('#load').fadeOut('normal');
